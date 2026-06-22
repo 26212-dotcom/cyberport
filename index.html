@@ -4,61 +4,209 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CYBERPORT - 사이버 보안의 관문</title>
+
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#0a1224;color:white}
-header{padding:80px 20px;text-align:center;background:linear-gradient(135deg,#08101f,#123a6b)}
-h1{font-size:56px;margin:0}
-.subtitle{font-size:22px;margin-top:10px;color:#bcd4ff}
-section{padding:60px 20px;max-width:1100px;margin:auto}
-.cards{display:flex;flex-wrap:wrap;gap:20px}
-.card{flex:1;min-width:220px;background:#12213d;padding:20px;border-radius:12px}
-footer{text-align:center;padding:30px;background:#08101f}
-.btn{display:inline-block;margin-top:20px;padding:12px 24px;background:#2b6cff;color:white;text-decoration:none;border-radius:8px}
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#0a1224;
+    color:white;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:#08101f;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 24px;
+    background:#2b6cff;
+    color:white;
+    text-decoration:none;
+    border:none;
+    border-radius:8px;
+}
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.hero-text{
+    width:50%;
+}
+
+.hero h1{
+    font-size:56px;
+}
+
+.hero-image img{
+    width:500px;
+    max-width:100%;
+}
+
+.main-btn,.sub-btn{
+    display:inline-block;
+    padding:15px 30px;
+    margin:10px;
+    border-radius:10px;
+    text-decoration:none;
+}
+
+.main-btn{
+    background:#1565ff;
+    color:white;
+}
+
+.sub-btn{
+    border:1px solid #1565ff;
+    color:white;
+}
+
+section{
+    padding:60px 20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.services{
+    text-align:center;
+}
+
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#12213d;
+    padding:20px;
+    border-radius:12px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#08101f;
+}
 </style>
 </head>
+
 <body>
-<header>
-<h1>CYBERPORT</h1>
-<p class="subtitle">사이버 세상의 안전한 관문</p>
-<a class="btn" href="#services">서비스 보기</a>
+
+<header class="navbar">
+    <div class="logo">
+        <img src="logo.png" alt="CYBERPORT Logo">
+        <div>
+            <h2>CYBERPORT</h2>
+            <span>디지털 보안의 시작</span>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#about">회사소개</a>
+        <a href="#service">서비스</a>
+        <a href="#contact">문의하기</a>
+    </nav>
+
+    <button class="btn">상담 요청</button>
 </header>
 
-<section>
-<h2>회사 소개</h2>
-<p>CYBERPORT는 기업과 개인의 디지털 자산을 보호하는 정보보안 전문 기업입니다.
-최신 보안 기술을 활용하여 침해사고 대응, 취약점 분석, 보안 컨설팅 서비스를 제공합니다.</p>
+<section class="hero">
+    <div class="hero-text">
+        <p>CYBERPORT</p>
+
+        <h1>
+            안전한 연결로<br>
+            미래를 보호합니다
+        </h1>
+
+        <p>
+            CYBERPORT는 첨단 보안 기술과 전문성을 기반으로
+            기업과 기관의 디지털 자산을 안전하게 보호합니다.
+        </p>
+
+        <a href="#service" class="main-btn">
+            서비스 알아보기
+        </a>
+    </div>
+
+    <div class="hero-image">
+        <img src="security.png" alt="Security">
+    </div>
 </section>
 
-<section id="services">
-<h2>핵심 서비스</h2>
-<div class="cards">
-<div class="card">
-<h3>Protect</h3>
-<p>중요 데이터와 시스템을 안전하게 보호합니다.</p>
-</div>
-<div class="card">
-<h3>Detect</h3>
-<p>사이버 위협을 실시간으로 탐지합니다.</p>
-</div>
-<div class="card">
-<h3>Defend</h3>
-<p>공격을 차단하고 신속하게 대응합니다.</p>
-</div>
-<div class="card">
-<h3>Gateway</h3>
-<p>안전한 디지털 환경으로 연결하는 관문이 됩니다.</p>
-</div>
-</div>
+<section id="about">
+    <h2>회사 소개</h2>
+    <p>
+        CYBERPORT는 기업과 개인의 디지털 자산을 보호하는
+        정보보안 전문 기업입니다.
+    </p>
 </section>
 
-<section>
-<h2>문의하기</h2>
-<p>Email: contact@cyberport.co.kr</p>
-<p>Tel: 02-0000-0000</p>
+<section id="service" class="services">
+    <h2>핵심 보안 서비스</h2>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>보안 컨설팅</h3>
+            <p>최적의 보안 전략을 제공합니다.</p>
+        </div>
+
+        <div class="card">
+            <h3>네트워크 보안</h3>
+            <p>네트워크 위협을 탐지하고 차단합니다.</p>
+        </div>
+
+        <div class="card">
+            <h3>클라우드 보안</h3>
+            <p>안전한 클라우드 환경을 구축합니다.</p>
+        </div>
+
+        <div class="card">
+            <h3>관제 및 대응</h3>
+            <p>24시간 실시간 보안 모니터링을 수행합니다.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2>문의하기</h2>
+    <p>Email: contact@cyberport.co.kr</p>
+    <p>Tel: 02-0000-0000</p>
 </section>
 
 <footer>
-© 2026 CYBERPORT. All Rights Reserved.
+    © 2026 CYBERPORT. All Rights Reserved.
 </footer>
+
 </body>
 </html>
